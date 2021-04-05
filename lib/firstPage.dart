@@ -1,8 +1,10 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:gifty/questionsScreen.dart';
-
+import 'dart:convert' as convert;
+import 'package:http/http.dart' as http;
 import 'giftscreen.dart';
+
 
 class firstScreen extends StatefulWidget {
   @override
@@ -12,8 +14,17 @@ class firstScreen extends StatefulWidget {
 class _firstScreenState extends State<firstScreen> {
   int _selectedItemIndex = 0;
 
+
+    Future getData(url) async {
+    http.Response response = await http.get(url);
+    return response.body;
+
+  }
+
+
   @override
   Widget build(BuildContext context) {
+
     return Scaffold(
       bottomNavigationBar: Row(
         children: <Widget>[
@@ -89,11 +100,21 @@ class _firstScreenState extends State<firstScreen> {
                               height: 10,
                             ),
                             FlatButton(
-                              onPressed: () {
-                                Navigator.push(
-                                  context,
-                                  MaterialPageRoute(builder: (context) => MyHomePage()),
-                                );
+                              onPressed:  () async {
+
+                                var data = await getData(Uri.http('10.0.2.2:5000', '/api',{"Query": "DB Longboards Contra Drop Deck Maple Longboard Complete"}));
+                                var decodedData = convert.jsonDecode(data);
+
+
+                                setState(() {
+                                  print(decodedData);
+                                });
+
+
+                                // Navigator.push(
+                                //   context,
+                                //   MaterialPageRoute(builder: (context) => MyHomePage()),
+                                // );
                               },
                               padding: EdgeInsets.all(0.0),
                               child: Container(
