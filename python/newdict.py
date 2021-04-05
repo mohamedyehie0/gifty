@@ -63,10 +63,10 @@ def recommend_movies_based_on_plot():
 
     #newmapping = list(newmapping.values())
 
-    return jsonify(newmapping[0]["Image"],)
+    return jsonify(newmapping[0]['Uniq Id'])
 
 if __name__ == '__main__':
-    app.run()
+    app.run(ssl_context='adhoc')
 
 #print(recommend_movies_based_on_plot('DB Longboards CoreFlex Crossbow 41" Bamboo Fiberglass Longboard Complete'))
 

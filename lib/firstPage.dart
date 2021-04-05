@@ -102,7 +102,7 @@ class _firstScreenState extends State<firstScreen> {
                             FlatButton(
                               onPressed:  () async {
 
-                                var data = await getData(Uri.http('10.0.2.2:5000', '/api',{"Query": "DB Longboards Contra Drop Deck Maple Longboard Complete"}));
+                                var data = await getData(Uri.https('10.0.2.2:5000', '/api',{"Query": "DB Longboards Contra Drop Deck Maple Longboard Complete"}));
                                 var decodedData = convert.jsonDecode(data);
 
 
