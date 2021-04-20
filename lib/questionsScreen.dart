@@ -18,10 +18,11 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        height: 600,
         decoration: BoxDecoration(
-          color: Color(0xFFE4B4B4),
-        ),
+            image: DecorationImage(
+              image: AssetImage('images/gift.gif'),
+              fit: BoxFit.cover,
+            )),
         child: Align(
           alignment: FractionalOffset.bottomLeft,
           child: Container(
@@ -136,14 +137,15 @@ class _MyNextPageState extends State<MyNextPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        height: 600,
         decoration: BoxDecoration(
-          color: Color.fromRGBO(228, 180, 180, 1),
-        ),
+            image: DecorationImage(
+              image: AssetImage('images/gift.gif'),
+              fit: BoxFit.cover,
+            )),
         child: Align(
           alignment: FractionalOffset.bottomLeft,
           child: Container(
-            height: 370,
+            height: 400,
             decoration: new BoxDecoration(
               color: Colors.white,
               borderRadius: BorderRadius.vertical(
@@ -282,10 +284,11 @@ class _MyQuestionPage extends State<MyQuestionPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        height: 600,
         decoration: BoxDecoration(
-          color: Color.fromRGBO(228, 180, 180, 1),
-        ),
+            image: DecorationImage(
+              image: AssetImage('images/gift.gif'),
+              fit: BoxFit.cover,
+            )),
         child: Align(
           alignment: FractionalOffset.bottomLeft,
           child: Container(
@@ -434,10 +437,11 @@ class _MyQuestionPage2 extends State<MyQuestionPage2> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        height: 600,
         decoration: BoxDecoration(
-          color: Color.fromRGBO(228, 180, 180, 1),
-        ),
+            image: DecorationImage(
+              image: AssetImage('images/gift.gif'),
+              fit: BoxFit.cover,
+            )),
         child: Align(
           alignment: FractionalOffset.bottomLeft,
           child: Container(
@@ -586,10 +590,11 @@ class _MyQuestionPage3 extends State<MyQuestionPage3> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        height: 600,
         decoration: BoxDecoration(
-          color: Color.fromRGBO(228, 180, 180, 1),
-        ),
+            image: DecorationImage(
+              image: AssetImage('images/gift.gif'),
+              fit: BoxFit.cover,
+            )),
         child: Align(
           alignment: FractionalOffset.bottomLeft,
           child: Container(
@@ -738,10 +743,11 @@ class _MyQuestionPage4 extends State<MyQuestionPage4> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        height: 600,
         decoration: BoxDecoration(
-          color: Color.fromRGBO(228, 180, 180, 1),
-        ),
+            image: DecorationImage(
+              image: AssetImage('images/gift.gif'),
+              fit: BoxFit.cover,
+            )),
         child: Align(
           alignment: FractionalOffset.bottomLeft,
           child: Container(

@@ -5,7 +5,6 @@ import 'dart:convert' as convert;
 import 'package:http/http.dart' as http;
 import 'giftscreen.dart';
 
-
 class firstScreen extends StatefulWidget {
   @override
   _firstScreenState createState() => _firstScreenState();
@@ -14,17 +13,13 @@ class firstScreen extends StatefulWidget {
 class _firstScreenState extends State<firstScreen> {
   int _selectedItemIndex = 0;
 
-
-    Future getData(url) async {
+  Future getData(url) async {
     http.Response response = await http.get(url);
     return response.body;
-
   }
-
 
   @override
   Widget build(BuildContext context) {
-
     return Scaffold(
       bottomNavigationBar: Row(
         children: <Widget>[
@@ -37,21 +32,20 @@ class _firstScreenState extends State<firstScreen> {
       ),
       backgroundColor: Colors.white,
       body: Container(
-          color: Color.fromRGBO(228, 180, 180, 1),
+          decoration: BoxDecoration(
+              image: DecorationImage(
+            image: AssetImage('images/gift.gif'),
+            fit: BoxFit.cover,
+          )),
+          //color: Color.fromRGBO(228, 180, 180, 1),
           child: Center(
             child: Column(
               children: <Widget>[
-                Container(
-                  height: 320,
-                  color: Color.fromRGBO(228, 180, 180, 1),
-                  /*child: Image(
-                height: MediaQuery.of(context).size.height / 2,
-                 image: AssetImage('images/gifty.png'),
-                fit: BoxFit.cover,
-          ),*/
+                Expanded(
+                  child: Container(),
                 ),
                 SizedBox(
-                  height: 15,
+                  height: 100,
                 ),
                 Expanded(
                   child: Container(
@@ -100,21 +94,22 @@ class _firstScreenState extends State<firstScreen> {
                               height: 10,
                             ),
                             FlatButton(
-                              onPressed:  () async {
+                              onPressed: () async {
+                                // var data = await getData(Uri.https('10.0.2.2:5000', '/api',{"Query": "DB Longboards Contra Drop Deck Maple Longboard Complete"}));
+                                // var decodedData = convert.jsonDecode(data);
+                                //
+                                //
+                                // setState(() {
+                                //   for(int i = 1;i<6;i++){
+                                //     print(decodedData["$i"][0]);
+                                //   }
+                                // });
 
-                                var data = await getData(Uri.https('10.0.2.2:5000', '/api',{"Query": "DB Longboards Contra Drop Deck Maple Longboard Complete"}));
-                                var decodedData = convert.jsonDecode(data);
-
-
-                                setState(() {
-                                  print(decodedData);
-                                });
-
-
-                                // Navigator.push(
-                                //   context,
-                                //   MaterialPageRoute(builder: (context) => MyHomePage()),
-                                // );
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) => MyHomePage()),
+                                );
                               },
                               padding: EdgeInsets.all(0.0),
                               child: Container(
