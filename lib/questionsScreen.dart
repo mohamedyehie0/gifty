@@ -305,12 +305,14 @@ class _MyQuestionPage extends State<MyQuestionPage> {
                   margin: EdgeInsets.only(top: 30, left: 20),
                   child: Row(
                     children: [
-                      Text(
-                        "What does he/she mean to you?",
-                        style: TextStyle(
-                          color: Color(0xFFBF8989),
-                          fontSize: 24,
-                          letterSpacing: 1,
+                      Expanded(
+                        child: Text(
+                          "What does he/she mean to you?",
+                          style: TextStyle(
+                            color: Color(0xFFBF8989),
+                            fontSize: 24,
+                            letterSpacing: 1,
+                          ),
                         ),
                       ),
                     ],
@@ -458,12 +460,14 @@ class _MyQuestionPage2 extends State<MyQuestionPage2> {
                   margin: EdgeInsets.only(top: 30, left: 20),
                   child: Row(
                     children: [
-                      Text(
-                        "What is the gift occasion?",
-                        style: TextStyle(
-                          color: Color(0xFFBF8989),
-                          fontSize: 24,
-                          letterSpacing: 1,
+                      Expanded(
+                        child: Text(
+                          "What is the gift occasion?",
+                          style: TextStyle(
+                            color: Color(0xFFBF8989),
+                            fontSize: 24,
+                            letterSpacing: 1,
+                          ),
                         ),
                       ),
                     ],
@@ -607,19 +611,25 @@ class _MyQuestionPage3 extends State<MyQuestionPage3> {
             ),
             child: Column(
               children: [
-                Container(
-                  margin: EdgeInsets.only(top: 30, left: 20),
-                  child: Row(
-                    children: [
-                      Text(
-                        "What are his interests?",
-                        style: TextStyle(
-                          color: Color(0xFFBF8989),
-                          fontSize: 24,
-                          letterSpacing: 1,
+                Expanded(
+                  child: Container(
+                    margin: EdgeInsets.only(top: 30, left: 20),
+                    child: Row(
+                      children: [
+                        Expanded(
+                          child: Center(
+                            child: Text(
+                              "What are his interests?",
+                              style: TextStyle(
+                                color: Color(0xFFBF8989),
+                                fontSize: 24,
+                                letterSpacing: 1,
+                              ),
+                            ),
+                          ),
                         ),
-                      ),
-                    ],
+                      ],
+                    ),
                   ),
                 ),
                 Column(
@@ -764,12 +774,16 @@ class _MyQuestionPage4 extends State<MyQuestionPage4> {
                   margin: EdgeInsets.only(top: 30, left: 20),
                   child: Row(
                     children: [
-                      Text(
-                        "What does he like?",
-                        style: TextStyle(
-                          color: Color(0xFFBF8989),
-                          fontSize: 24,
-                          letterSpacing: 1,
+                      Expanded(
+                        child: Center(
+                          child: Text(
+                            "What does he like?",
+                            style: TextStyle(
+                              color: Color(0xFFBF8989),
+                              fontSize: 24,
+                              letterSpacing: 1,
+                            ),
+                          ),
                         ),
                       ),
                     ],
