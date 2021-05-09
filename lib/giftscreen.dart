@@ -108,10 +108,12 @@ class _GiftScreenState extends State<GiftScreen> {
               ),
             ),
             SizedBox(height: 3,),
-            Text(
-              category.name,
-              style: TextStyle(
-                fontSize: 13,
+            Expanded(
+              child: Text(
+                category.name,
+                style: TextStyle(
+                  fontSize: 11,
+                ),
               ),
             )
           ],

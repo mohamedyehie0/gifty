@@ -217,9 +217,12 @@ class _MyNextPageState extends State<MyNextPage> {
                         onChanged: (newValue) {
                           setState(() => currentValue = newValue);
                         },
+
                         decoration: BoxDecoration(
                           border: new Border(
+
                             top: new BorderSide(
+
                               style: BorderStyle.solid,
                               color: Colors.black26,
                             ),

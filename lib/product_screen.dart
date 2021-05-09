@@ -40,19 +40,23 @@ class _ProductScreenState extends State<ProductScreen> {
               ),
               Padding(
                 padding: const EdgeInsets.symmetric(vertical: 10),
+                child: Expanded(
+                  child: Text(
+                    product.name,
+                    style: TextStyle(
+                      fontSize: 17,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                ),
+              ),
+              Expanded(
                 child: Text(
-                  product.name,
+                  product.price.toString(),
                   style: TextStyle(
                     fontSize: 17,
                     fontWeight: FontWeight.bold,
                   ),
-                ),
-              ),
-              Text(
-                product.price.toString(),
-                style: TextStyle(
-                  fontSize: 17,
-                  fontWeight: FontWeight.bold,
                 ),
               )
             ],
@@ -130,7 +134,7 @@ class _ProductScreenState extends State<ProductScreen> {
                 ),
               ),
               Container(
-                height: 280,
+                height: 300,
                 color: Colors.grey[100],
                 child: ListView.builder(
                   padding: EdgeInsets.all(8),
