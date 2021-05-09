@@ -1,6 +1,5 @@
-import 'dart:ffi';
 import 'package:flutter/cupertino.dart';
-import 'productGrid.dart';
+import 'package:flutter/widgets.dart';
 import 'package:flutter/material.dart';
 import 'categories.dart';
 import 'product.dart';
@@ -12,13 +11,13 @@ class GiftScreen extends StatefulWidget {
 }
 
 class _GiftScreenState extends State<GiftScreen> {
-  _buildProduct(Product product)
-  {
+  _buildProduct(Product product) {
     return GestureDetector(
-      onTap: (){
+      onTap: () {
         Navigator.push(
           context,
-          MaterialPageRoute(builder: (context) => ProductScreen(product: product,)),
+          MaterialPageRoute(
+              builder: (context) => ProductScreen(product: product,)),
         );
       },
       child: Container(
@@ -46,6 +45,13 @@ class _GiftScreenState extends State<GiftScreen> {
                     fontSize: 17,
                     fontWeight: FontWeight.bold,
                   ),
+                ),
+              ),
+              Text(
+                product.price.toString()+' \$',
+                style: TextStyle(
+                  fontSize: 17,
+                  fontWeight: FontWeight.bold,
                 ),
               )
             ],
@@ -113,7 +119,6 @@ class _GiftScreenState extends State<GiftScreen> {
       ),
     );
   }
-
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -200,8 +205,7 @@ class _GiftScreenState extends State<GiftScreen> {
                   return _buildProduct(product);
                 },
               ),
-
-            )
+            ),
           ],
         ),
       ),
