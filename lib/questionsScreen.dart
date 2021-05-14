@@ -237,7 +237,7 @@ class _MyNextPageState extends State<MyNextPage> {
                   ],
                 ),
                 Container(
-                  margin: EdgeInsets.only(top: 15),
+                  margin: EdgeInsets.only(top: 30),
                   child: FlatButton(
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(15.0),
@@ -392,7 +392,7 @@ class _MyQuestionPage extends State<MyQuestionPage> {
                   ],
                 ),
                 Container(
-                  margin: EdgeInsets.only(top: 20),
+                  margin: EdgeInsets.only(top: 10),
                   child: FlatButton(
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(15.0),
@@ -547,7 +547,7 @@ class _MyQuestionPage2 extends State<MyQuestionPage2> {
                   ],
                 ),
                 Container(
-                  margin: EdgeInsets.only(top: 20),
+                  margin: EdgeInsets.only(top: 30),
                   child: FlatButton(
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(15.0),

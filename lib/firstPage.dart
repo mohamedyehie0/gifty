@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:gifty/questionsScreen.dart';
+import 'services.dart';
 
 import 'giftscreen.dart';
 
@@ -11,7 +12,7 @@ class firstScreen extends StatefulWidget {
 
 class _firstScreenState extends State<firstScreen> {
   int _selectedItemIndex = 0;
-
+  services s = new services();
 
 
   @override
@@ -91,11 +92,13 @@ class _firstScreenState extends State<firstScreen> {
                             ),
                             FlatButton(
                               onPressed: () {
-                                Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                      builder: (context) => MyHomePage()),
-                                );
+                                var l = [10,20,"Pet Supplies ", "Automotive "];
+                                s.all(l);
+                                // Navigator.push(
+                                //   context,
+                                //   MaterialPageRoute(
+                                //       builder: (context) => MyHomePage()),
+                                // );
                               },
                               padding: EdgeInsets.all(0.0),
                               child: Container(
